@@ -1,8 +1,9 @@
 " 【その他カスタム設定】
 set number
 set title
-" set clipboard&
-set clipboard=unnamed
+set clipboard&
+set clipboard=unnamedplus
+set ignorecase	" 大文字小文字を無視して検索
 syntax on
 set hlsearch
 set incsearch
