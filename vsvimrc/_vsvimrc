@@ -11,6 +11,8 @@ set list
 set listchars=tab:>.,eol:↲
 set ts=4
 set guifont=Menlo\ for\ Powerline
+set autoindent
+set mouse=a
 hi NonText guibg=NONE guifg=DarkGreen
 hi SpecialKey ctermfg=darkgray
 " カーソル設定
