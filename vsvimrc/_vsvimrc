@@ -10,6 +10,7 @@ set incsearch
 set list
 set listchars=tab:>.,eol:↲
 set ts=4
+set guifont=Menlo\ for\ Powerline
 hi NonText guibg=NONE guifg=DarkGreen
 hi SpecialKey ctermfg=darkgray
 " カーソル設定
@@ -29,8 +30,15 @@ inoremap <silent> <C-k> <C-o>k
 inoremap <silent> <C-h> <C-o>h
 inoremap <silent> <C-l> <C-o>l
 
+noremap <silent> <C-h> <C-w>h
+noremap <silent> <C-j> <C-w>j
+noremap <silent> <C-k> <C-w>k
+noremap <silent> <C-l> <C-w>l
+
 "　【カラースキーム】
-" colorscheme molokai
+" install: https://github.com/tomasr/molokai
+" copy: ~/.vim/colors/monokai.vim
+colorscheme molokai
 
 
 
