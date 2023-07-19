@@ -1,4 +1,4 @@
-" 【その他カスタム設定】
+" 【カスタム設定】
 set number
 set title
 set clipboard&
@@ -15,14 +15,15 @@ set autoindent
 set mouse=a
 hi NonText guibg=NONE guifg=DarkGreen
 hi SpecialKey ctermfg=darkgray
-" カーソル設定
+
+" 【カーソル設定】
 if has('vim_starting')
 " 挿入モード時に非点滅の縦棒タイプのカーソル
 let &t_SI .= "\e[5 q"
 " ノーマルモード時に非点滅のブロックタイプのカーソル
 let &t_EI .= "\e[1 q"
 " 置換モード時に非点滅の下線タイプのカーソル
-let &t_SR .= "\e[3 q"
+" let &t_SR .= "\e[3 q"
 endif
 
 " 【キーバインド】
@@ -36,6 +37,7 @@ noremap <silent> <C-h> <C-w>h
 noremap <silent> <C-j> <C-w>j
 noremap <silent> <C-k> <C-w>k
 noremap <silent> <C-l> <C-w>l
+noremap <silent> <S-v> <C-v>
 
 "　【カラースキーム】
 " install: https://github.com/tomasr/molokai
