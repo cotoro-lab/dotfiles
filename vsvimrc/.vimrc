@@ -15,6 +15,7 @@ set mouse=a
 set nowrap
 hi NonText guibg=NONE guifg=DarkGreen
 hi SpecialKey ctermfg=darkgray
+syntax on
 
 " 【カーソル設定】
 if has('vim_starting')
@@ -40,7 +41,6 @@ noremap <silent> <C-l> <C-w>l
 noremap <silent> <S-v> <C-v>
 
 "　【カラースキーム】
-syntax on
 " install: https://github.com/tomasr/molokai
 " install: https://github.com/jacoborus/tender.vim.git
 " copy: ~/.vim/colors/monokai.vim or tender.vim
