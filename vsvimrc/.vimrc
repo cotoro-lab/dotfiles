@@ -4,7 +4,6 @@ set title
 set clipboard&
 set clipboard=unnamedplus
 set ignorecase	" 大文字小文字を無視して検索
-syntax on
 set hlsearch
 set incsearch
 set list
@@ -13,6 +12,7 @@ set ts=4
 set guifont=Menlo\ for\ Powerline
 set autoindent
 set mouse=a
+set nowrap
 hi NonText guibg=NONE guifg=DarkGreen
 hi SpecialKey ctermfg=darkgray
 
@@ -40,6 +40,8 @@ noremap <silent> <C-l> <C-w>l
 noremap <silent> <S-v> <C-v>
 
 "　【カラースキーム】
+syntax on
 " install: https://github.com/tomasr/molokai
-" copy: ~/.vim/colors/monokai.vim
-" colorscheme molokai
+" install: https://github.com/jacoborus/tender.vim.git
+" copy: ~/.vim/colors/monokai.vim or tender.vim
+" colorscheme molokai or tender
