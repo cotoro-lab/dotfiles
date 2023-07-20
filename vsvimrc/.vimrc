@@ -45,3 +45,11 @@ syntax on
 " install: https://github.com/jacoborus/tender.vim.git
 " copy: ~/.vim/colors/monokai.vim or tender.vim
 " colorscheme molokai or tender
+
+" 背景色を透過する設定
+" これより上にカラースキームの設定を記載すること
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none
