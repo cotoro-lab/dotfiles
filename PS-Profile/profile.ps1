@@ -2,6 +2,7 @@
 Function EditVimrc { vim ~/.vimrc }
 Function EditProfile { vim "C:\Program Files\PowerShell\7\profile.ps1" }
 
+# .vifmrc -> "command! Q :execute '!echo %d > ~/.vifm/lastdir' | quit"
 function Vifmcd
 {
     $dst = & vifm --choose-dir - $args
