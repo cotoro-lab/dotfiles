@@ -66,6 +66,8 @@ set guifont=Menlo\ for\ Powerline
 set autoindent
 set mouse=a
 set nowrap
+set modifiable
+set write
 hi NonText guibg=NONE guifg=DarkGreen
 hi SpecialKey ctermfg=darkgray
 syntax on
@@ -161,7 +163,9 @@ highlight LineNr ctermbg=none
 highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none
 highlight Visual cterm=none ctermbg=241 ctermfg=254
-highlight Search cterm=none ctermbg=229 ctermfg=232
+highlight Search cterm=none ctermbg=186 ctermfg=234
+highlight Comment cterm=none ctermbg=none ctermfg=243
+
 
 
 
