@@ -53,3 +53,7 @@ highlight NonText ctermbg=none
 highlight LineNr ctermbg=none
 highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none
+highlight Visual cterm=none ctermbg=241 ctermfg=254
+highlight Search cterm=none ctermbg=229 ctermfg=232
+
+
