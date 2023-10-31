@@ -8,5 +8,12 @@ function ranger-cd {
 	rm -f -- "$temp_file"
 }
 
+# USER_ALIAS
 alias ran='ranger-cd'
 alias vi='vim'
+alias bashcommit='source ~/.bashrc'
+alias vimrc='vim ~/.vimrc'
+alias bashrc='vim ~/.bashrc'
+alias cdhome='cd ~'
+alias docker='sudo docker'
+alias grep='grep -i -n -r'
