@@ -21,9 +21,10 @@ alias bashrc='vim ~/.bashrc'
 # tmux --------------------------------
 alias tm='tmux'
 alias tmlist='tmux list-session'
-alias tmback='tmux a -t'
+alias tmname='tmux a -t'
 alias tmnew='tmux new -s'
 alias tmkill='tmux kill-session -t'
+alias tmcommit='tmux source-file ~/.tmux.conf'
 
 # docker -----------------------------------
 alias docker='sudo docker'
