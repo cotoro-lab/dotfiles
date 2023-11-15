@@ -37,6 +37,9 @@ call dein#add('Shougo/neosnippet-snippets')
 " Finish Dein initialization (required)
 call dein#end()
 
+" Force Cache Clear
+" call dein#recache_runtimepath()
+
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
