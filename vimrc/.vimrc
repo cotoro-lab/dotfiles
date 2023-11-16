@@ -26,6 +26,7 @@ call dein#add('Shougo/vimshell')
 call dein#add('Shougo/vimfiler')
 call dein#add('Shougo/unite.vim')
 call dein#add('cohama/lexima.vim')
+call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
 
 " Finish Dein initialization (required)
 call dein#end()
@@ -123,6 +124,32 @@ let g:airline#extensions#tabline#buffer_idx_format = {
 let g:ranger_executable = 'ranger'
 let g:ranger_on_exit = 'bwipe'
 let g:ranger_open_mode = 'tabe'
+
+
+"【coc.nvimの設定】
+"---------------------------------------------------------------------------------
+" 追加したい言語はここに記載して管理する
+let g:coc_global_extensions = [
+	\'coc-tsserver',
+	\'coc-json',
+	\'coc-omnisharp',
+	\'coc-jedi',
+	\'coc-html',
+	\'coc-css',
+\]
+" <Tab>で候補をナビゲート
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+" <Tab>で次、<S+Tab>で前
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
 " 【キーバインド】
