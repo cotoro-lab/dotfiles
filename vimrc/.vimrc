@@ -170,4 +170,8 @@ highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none
 highlight Visual cterm=none ctermbg=241 ctermfg=254
 highlight Search cterm=none ctermbg=186 ctermfg=234
-highlight Comment cterm=none ctermbg=none ctermfg=243
+highlight Comment cterm=none ctermbg=none ctermfg=244
+highlight LineNr guifg=#808080 ctermfg=244 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight NonText guifg=#808080 ctermfg=244 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight SpecialKey guifg=#808080 ctermfg=244 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
