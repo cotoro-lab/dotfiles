@@ -13,6 +13,7 @@ vim.o.shiftwidth = 4
 
 vim.o.visualbell = true
 vim.o.number = true
+vim.o.relativenumber = false
 vim.o.showmatch = true
 vim.o.matchtime = 1
 
