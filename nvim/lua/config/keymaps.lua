@@ -24,4 +24,5 @@ keymap.set("n", "<S-h>", "<S-h>", opts)
 keymap.set("n", "<S-l>", "<S-l>", opts)
 
 
-keymap.set("n", "<C-b>", "<Cmd>Explore<CR>")
+keymap.set("n", "<C-b>", "<Cmd>NERDTreeToggle<CR>")
+
