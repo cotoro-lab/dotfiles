@@ -17,5 +17,11 @@ keymap.set("n", "wl", "<C-w>l")
 keymap.set("n", "wv", "<C-w>v")
 keymap.set("n", "ws", "<C-w>s")
 keymap.set("n", "<S-v>", "<C-v>")
+keymap.set("n", "<C-l>", "0v$h")
+keymap.set("n", "<C-i>", "<Cmd>bprev<CR>")
+keymap.set("n", "<C-o>", "<Cmd>bnext<CR>")
+keymap.set("n", "<S-h>", "<S-h>", opts)
+keymap.set("n", "<S-l>", "<S-l>", opts)
+
 
 keymap.set("n", "<C-b>", "<Cmd>Explore<CR>")
