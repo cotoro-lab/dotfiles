@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local keymap = vim.keymap
+local apikeymap = vim.api.nvim_set_keymap
 local opts = { silent = true }
 
 keymap.set("i", "jj", "<Esc>")
@@ -26,3 +27,23 @@ keymap.set("n", "<S-l>", "<S-l>", opts)
 
 keymap.set("n", "<C-b>", "<Cmd>NERDTreeToggle<CR>")
 
+keymap.set("n", "<M-?>", "<Cmd>Copilot panel<CR>")
+apikeymap("n", "<M-/>", ":lua execute_copilot_chat()<CR>", {})
+
+
+--  =========================================================
+-- Functions
+--  =========================================================
+
+--  ----------------------------------------------------------
+-- ユーザー入力を受け取りCopilotChatコマンドを実行する関数
+function execute_copilot_chat()
+  -- 入力をプロンプトで受け取る
+  local user_input = vim.fn.input("CopilotChat: ")
+
+  if user_input ~= "" then
+    -- CopilotChatコマンドを実行
+    vim.cmd("CopilotChat " .. user_input)
+  end
+end
+--  ----------------------------------------------------------
