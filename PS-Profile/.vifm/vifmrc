@@ -1,0 +1,19 @@
+" show hiddden files in both panes "
+windo normal zo
+
+" view file preview "
+" this setting is bagg when 1 pain.
+" view
+
+" set line number  "
+set number
+
+" key binding "
+nnoremap gn :tabnew<cr>
+nnoremap q :quit<cr>
+nnoremap Q :cquit<cr>
+nnoremap a cW
+nnoremap A cw
+
+
+colorscheme palenight
