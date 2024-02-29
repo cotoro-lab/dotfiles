@@ -8,12 +8,16 @@ windo normal zo
 " set line number  "
 set number
 
+" using editor "
+" set vicmd=nvim
+
 " key binding "
 nnoremap gn :tabnew<cr>
 nnoremap q :quit<cr>
 nnoremap Q :cquit<cr>
 nnoremap a cW
 nnoremap A cw
+nnoremap o :!nvim %f<cr>
 
-
+" color scheme "
 colorscheme palenight
