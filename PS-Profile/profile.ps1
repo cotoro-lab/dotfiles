@@ -13,8 +13,18 @@ Function Vifmcd
 {
     $openDir = Get-Location
     $dst = & vifm $openDir --choose-dir - $args
-    if ([string]::IsNullOrEmpty($dst)) {
+    if ([string]::IsNullOrEmpty($dst))
+    {
         Write-Host 'Directory picking cancelled/failed'
+        return 1
+    }
+    $dst = $dst -replace "`f", ''
+    if (!(Test-Path $dst))
+    {
+        $message = "The path '$dst' does not exist."
+        $logFile = "C:\Users\s.uto\.vifm\errorLog.txt"
+        Add-Content -Path $logFile -Value $message
+        Write-Host $message
         return 1
     }
     Set-Location -LiteralPath $dst
