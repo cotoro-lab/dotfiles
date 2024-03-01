@@ -8,8 +8,8 @@ windo normal zo
 " set line number  "
 set number
 
-" using editor "
-" set vicmd=nvim
+" using editor vim => nvim"
+set vixcmd=nvim
 
 " key binding "
 nnoremap gn :tabnew<cr>
