@@ -39,3 +39,4 @@ Set-Alias -Name cdnvim -Value CdNeovim
 
 Set-Alias -Name grep -Value Select-String
 Set-Alias -Name clip -Value Set-Clipboard
+Set-PSReadlineKeyHandler -Key ctrl+d -Function DeleteCharOrExit
