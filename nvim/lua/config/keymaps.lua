@@ -29,6 +29,7 @@ keymap.set("n", "<C-b>", "<Cmd>NERDTreeToggle<CR>")
 
 keymap.set("n", "<M-?>", "<Cmd>Copilot panel<CR>")
 apikeymap("n", "<M-/>", ":lua execute_copilot_chat()<CR>", {})
+apikeymap("i", "<M-i>", 'copilot#Accept("\\<CR>")', { silent = true, expr = true })
 
 
 --  =========================================================
