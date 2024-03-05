@@ -6,9 +6,28 @@
 Function EditVimrc { nvim ~/.vimrc }
 Function EditProfile { nvim "C:\Program Files\PowerShell\7\profile.ps1" }
 Function CdNeovim { Set-Location "C:\Users\s.uto\AppData\Local\nvim" }
+# カレントディレクトリをexplorerで開く
 Function Open-CurrentDirectory {
     Invoke-Item .
 }
+
+# pdfをedgeで開く
+Function Open-Pdf
+{
+    param (
+        [string]$FilePath
+    )
+
+    $currentDir = Get-Location
+    if (-not [string]::IsNullOrWhiteSpace($FilePath))
+    {
+        $fullPath = Join-Path -Path $currentDir -ChildPath $FilePath
+        $fileFullPathWin = $fullPath -replace '/', '\'
+        Start-Process "msedge" "`"$fileFullPathWin`""
+    }
+}
+
+# ranger-cd的な
 Function Vifmcd
 {
     $openDir = Get-Location
@@ -35,6 +54,7 @@ Set-Alias -Name ran -Value Vifmcd
 Set-Alias -Name vimrc -Value EditVimrc
 Set-Alias -Name profile -Value EditProfile
 Set-Alias -Name open -Value Open-CurrentDirectory
+Set-Alias -Name pdf -Value Open-Pdf
 Set-Alias -Name cdnvim -Value CdNeovim
 
 Set-Alias -Name grep -Value Select-String
