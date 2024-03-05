@@ -23,6 +23,8 @@ keymap.set("n", "<C-i>", "<Cmd>bprev<CR>")
 keymap.set("n", "<C-o>", "<Cmd>bnext<CR>")
 keymap.set("n", "<S-h>", "<S-h>", opts)
 keymap.set("n", "<S-l>", "<S-l>", opts)
+keymap.set("n", "gg", "gg0")
+keymap.set("n", "G", "G$")
 
 
 keymap.set("n", "<C-b>", "<Cmd>NERDTreeToggle<CR>")
