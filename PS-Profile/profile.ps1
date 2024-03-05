@@ -5,7 +5,7 @@
 # --- Function -------------------------------------
 Function EditVimrc { nvim ~/.vimrc }
 Function EditProfile { nvim "C:\Program Files\PowerShell\7\profile.ps1" }
-Function CdNeovim { Set-Location "C:\Users\s.uto\AppData\Local\nvim" }
+Function CdNeovim { Set-Location "C:\Users\****\AppData\Local\nvim" }
 # カレントディレクトリをexplorerで開く
 Function Open-CurrentDirectory {
     Invoke-Item .
