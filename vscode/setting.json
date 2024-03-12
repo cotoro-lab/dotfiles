@@ -1,0 +1,113 @@
+{
+    // Window設定
+    "window.title": "${dirty}${activeEditorShort} / ${rootName}", // タイトルバーの文字
+    "window.closeWhenEmpty": false,
+
+    // エディター設定
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": true, 
+    "editor.minimap.maxColumn": 40, // ミニマップの幅
+    "editor.minimap.renderCharacters": false,
+    "editor.renderWhitespace": "all",
+    "editor.fontFamily": "CaskaydiaMono Nerd Font",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+
+    //ワークベンチ設定
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Solarized Osaka",
+    "workbench.iconTheme": "material-icon-theme",
+
+    // ターミナル設定
+    // "terminal.integrated.defaultProfile.osx": "zsh",
+
+    //vim設定
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["C-j"],
+            "after": ["C-o","j"]
+        },
+        {
+            "before": ["C-k"],
+            "after": ["C-o","k"]
+        },
+        {
+            "before": ["C-h"],
+            "after": ["C-o","h"]
+        },
+        {
+            "before": ["C-l"],
+            "after": ["C-o","l"]
+        },
+        
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["c-w","v"],
+            "after" : ["wv"]
+        },
+        {
+            "before": ["c-w","s"],
+            "after" : ["ws"]
+        },
+        {
+            "before": ["c-w","l"],
+            "after" : ["wl"]
+        },
+        {
+            "before": ["c-w","k"],
+            "after" : ["wk"]
+        },
+        {
+            "before": ["c-w","j"],
+            "after" : ["wj"]
+        },
+        {
+            "before": ["c-w","h"],
+            "after" : ["wh"]
+        },
+    ],
+    
+
+    // ネーミング | codic 設定
+    "codic.ACCESS_TOKEN": "3M1oePRGIRYBir2f0Fs86UFesvPSx9pJeS",
+    "codic.case": "snake_case",
+
+    "scm.inputFontSize": 9,
+    "omnisharp.useGlobalMono": "always",
+    "security.workspace.trust.untrustedFiles": "open",
+
+    // "liveServer.settings.donotShowInfoMsg": true,
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-17",
+    "redhat.telemetry.enabled": true,
+    // "boot-java.rewrite.reconcile": true,
+
+    // 言語設定
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "quickfix.insertSemicolon": "explicit",
+            "source.organizeImports": "explicit",
+            "source.fixAll": "explicit"
+        }
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.activityBar.location": "top", // (2020-12-31 Added) Visual Studio Codeが使用するTypeScriptの設定
+}
