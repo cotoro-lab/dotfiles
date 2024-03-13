@@ -5,10 +5,23 @@
 # --- Function -------------------------------------
 Function EditVimrc { nvim ~/.vimrc }
 Function EditProfile { nvim "C:\Program Files\PowerShell\7\profile.ps1" }
+
+# Change Directory
 Function CdNeovim { Set-Location "C:\Users\****\AppData\Local\nvim" }
+Function CdGitDir { Set-Location "C:\Users\****\wk\git" }
+Function CdSrcDir { Set-Location "C:\Users\****\wk\src" }
+Function CdSwapDir { Set-Location "~\AppData\Local\nvim-data\swap" }
+
 # カレントディレクトリをexplorerで開く
 Function Open-CurrentDirectory {
     Invoke-Item .
+}
+
+# カレントディレクトリのパスをクリップボードにコピー
+function PwdClip
+{
+    $currentDir = Get-Location
+    $currentDir | Set-Clipboard
 }
 
 # pdfをedgeで開く
@@ -50,13 +63,19 @@ Function Vifmcd
 }
 
 # --- Alias -------------------------------------"
+# Functions
 Set-Alias -Name ran -Value Vifmcd
 Set-Alias -Name vimrc -Value EditVimrc
 Set-Alias -Name profile -Value EditProfile
-Set-Alias -Name open -Value Open-CurrentDirectory
-Set-Alias -Name pdf -Value Open-Pdf
 Set-Alias -Name cdnvim -Value CdNeovim
+Set-Alias -Name cdgit -Value CdGitDir
+Set-Alias -Name cdsrc -Value CdSrcDir
+Set-Alias -Name cdswp -Value CdSwapDir
+Set-Alias -Name open -Value Open-CurrentDirectory
+Set-Alias -Name pcwin -Value PwdClip
+Set-Alias -Name pdf -Value Open-Pdf
 
+# Not Function
 Set-Alias -Name grep -Value Select-String
 Set-Alias -Name clip -Value Set-Clipboard
 Set-PSReadlineKeyHandler -Key ctrl+d -Function DeleteCharOrExit
