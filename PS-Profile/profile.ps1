@@ -54,7 +54,7 @@ Function Vifmcd
     if (!(Test-Path $dst))
     {
         $message = "The path '$dst' does not exist."
-        $logFile = "C:\Users\s.uto\.vifm\errorLog.txt"
+        $logFile = "C:\Users\****\.vifm\errorLog.txt"
         Add-Content -Path $logFile -Value $message
         Write-Host $message
         return 1
