@@ -33,6 +33,9 @@ keymap.set("n", "<M-?>", "<Cmd>Copilot panel<CR>")
 apikeymap("n", "<M-/>", ":lua execute_copilot_chat()<CR>", {})
 apikeymap("i", "<M-i>", 'copilot#Accept("\\<CR>")', { silent = true, expr = true })
 
+keymap.set("n", "<M-i>", ":edit ++encoding=sjis<CR>")
+keymap.set("n", "<M-I>", ":e ++enc=utf-8<CR>")
+
 
 --  =========================================================
 -- Functions
