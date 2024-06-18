@@ -1,3 +1,6 @@
+# oh-my-posh init pwsh --config "{user-pass}\takuya.omp.json" | Invoke-Expression
+$vifmPath = "{vifm格納パス}"
+
 # --- Encoding -------------------------------------
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 [Console]::InputEncoding = [System.Text.Encoding]::GetEncoding("shift_jis")
@@ -44,7 +47,7 @@ Function Open-Pdf
 Function Vifmcd
 {
     $openDir = Get-Location
-    $dst = & vifm $openDir --choose-dir - $args
+    $dst = & $vifmPath $openDir --choose-dir - $args
     if ([string]::IsNullOrEmpty($dst))
     {
         Write-Host 'Directory picking cancelled/failed'
